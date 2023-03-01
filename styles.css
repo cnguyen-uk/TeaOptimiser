@@ -94,7 +94,7 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
-.content {
-  padding: 0 20px;
+.assumptions-content,
+.result-explanation-content {
   display: none;
 }
