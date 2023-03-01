@@ -108,7 +108,7 @@ input[type="submit"]:hover {
 .collapsible::before {
   content: '+';
   position: relative;
-  padding-left: 20px; /* add some padding to the left of the collapsible content sign */
+  padding-left: 10px; /* add some padding to the left of the collapsible content sign */
 }
 
 .collapsible.active::before {
