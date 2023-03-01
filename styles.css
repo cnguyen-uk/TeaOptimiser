@@ -94,28 +94,28 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
-.collapsible-header {
-  padding: 0 10px;
-}
-
 .collapsible {
+  position: relative;
+  padding-left: 20px; /* add some padding to the left of the heading */
   cursor: pointer;
 }
 
-.collapsible::after {
-  content: "\002B";
-  color: black;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+.collapsible::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.active::after {
-  content: "\2212";
+.collapsible.active::before {
+  content: '-';
 }
 
 .content {
   display: none;
-  margin-left: 20px;
+  padding-left: 20px; /* add some padding to the left of the content */
 }
 
+.active {
+  display: block;
+}
