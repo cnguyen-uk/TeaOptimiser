@@ -99,6 +99,24 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
+.collapsible-content {
+  background-color: #f7f7f7;
+}
+
+.collapsible-header:hover {
+  background-color: #eee;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible-content.is-expanded {
+  max-height: 1000px;
+}
+
 .collapsible {
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
