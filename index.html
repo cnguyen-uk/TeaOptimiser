@@ -28,7 +28,11 @@
       <div class="result" id="resultCell">0 ml</div>
     </main>
 
-    <div class="assumptions">
+    <button class="toggle-button" onclick="toggleContent('assumptions-content')">Toggle Assumptions</button>
+
+    <button class="toggle-button" onclick="toggleContent('result-explanation-content')">Toggle Result Explanation</button>
+
+    <div id="assumptions-content">
       <h2>Assumptions</h2>
       <ul>
         <li>The general recommended teapot fill is between 80% and 90% of maximum capacity.</li>
@@ -37,7 +41,7 @@
       </ul>
     </div>
 
-    <div class="result-explanation">
+    <div id="result-explanation-content">
       <h2>Result Explanation</h2>
         <ul>
           <li>If the result goes green, then the teapot is the ideal size for the water required.</li>

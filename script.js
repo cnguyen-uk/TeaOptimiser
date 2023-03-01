@@ -29,3 +29,12 @@ form.addEventListener("submit", (event) => {
     resultCell.classList.add("green");
   }
 });
+
+function toggleContent(id) {
+  var content = document.getElementById(id);
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
