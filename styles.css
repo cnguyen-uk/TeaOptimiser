@@ -105,13 +105,13 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-.collapsible::before {
+.collapsible::after {
   content: '+';
   position: relative;
   padding-left: 10px; /* add some padding to the left of the collapsible content sign */
 }
 
-.collapsible.active::before {
+.collapsible.active::after {
   content: '-';
 }
 
