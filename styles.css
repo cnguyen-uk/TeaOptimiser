@@ -92,3 +92,12 @@ input[type="submit"]:hover {
 .green {
   background-color: #4caf50;
 }
+
+/* Add CSS styles for the explanatory sections */
+.assumptions {
+  padding: 0 20px;
+}
+
+.result-explanation {
+  padding: 0 20px;
+}
