@@ -20,6 +20,11 @@ main {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+ul {
+  word-wrap: break-word;
+  width: 60ch;
+}
+
 /* Add CSS styles for the form and input fields */
 form {
   margin: 20px 0;
