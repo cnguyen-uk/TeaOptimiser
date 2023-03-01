@@ -1,0 +1,94 @@
+/* Add CSS styles for the page layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin: 30px 20px;
+  font-size: 36px;
+  color: #222;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add CSS styles for the form and input fields */
+form {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100px;
+  padding: 5px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #4285f4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3c78d8;
+}
+
+/* Add CSS styles for the result cell */
+.result {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.gray {
+  background-color: #ccc;
+}
+
+.red {
+  background-color: #f44336;
+}
+
+.yellow {
+  background-color: #ffeb3b;
+  color: #222;
+}
+
+.green {
+  background-color: #4caf50;
+}
