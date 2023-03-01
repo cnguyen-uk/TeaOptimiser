@@ -1,7 +1,96 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <title>Calculator for required brewing water</title>
+    <style>
+      /* Add CSS styles for the form and input fields */
+      form {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+
+      label {
+        display: inline-block;
+        width: 200px;
+      }
+
+      input[type="text"] {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      /* Add CSS styles for the result cell */
+      #result {
+        font-weight: bold;
+      }
+
+      .gray {
+        background-color: #ccc;
+      }
+
+      .red {
+        background-color: #ff8080;
+      }
+
+      .yellow {
+        background-color: #ffff99;
+      }
+
+      .green {
+        background-color: #b3ffb3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator for required brewing water</h1>
+    <form id="brewingForm">
+      <label for="peopleInput">People:</label>
+      <input type="text" id="peopleInput" name="peopleInput"><br>
+
+      <label for="teacupSizeInput">Teacup Size (ml):</label>
+      <input type="text" id="teacupSizeInput" name="teacupSizeInput"><br>
+
+      <label for="fillInput">Fill (%):</label>
+      <input type="text" id="fillInput" name="fillInput"><br>
+
+      <label for="teapotSizeInput">Teapot Size (ml):</label>
+      <input type="text" id="teapotSizeInput" name="teapotSizeInput"><br>
+
+      <input type="submit" value="Calculate">
+    </form>
+
+    <p>Water Required (ml): <span id="result"></span></p>
+
+    <script>
+      const form = document.querySelector('#brewingForm');
+      const resultEl = document.querySelector('#result');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const people = parseInt(form.peopleInput.value);
+        const teacupSize = parseInt(form.teacupSizeInput.value);
+        const fill = parseInt(form.fillInput.value);
+        const teapotSize = parseInt(form.teapotSizeInput.value);
+
+        const waterRequired = people * teacupSize * fill / 100;
+        const waterRatio = waterRequired / teapotSize;
+
+        resultEl.textContent = waterRequired + 'ml';
+
+        resultEl.classList.remove('gray', 'red', 'yellow', 'green');
+
+        if (teapotSize < waterRequired) {
+          resultEl.classList.add('gray');
+        } else if (waterRatio > 0.9) {
+          resultEl.classList.add('red');
+        } else if (waterRatio < 0.8) {
+          resultEl.classList.add('yellow');
+        } else {
+          resultEl.classList.add('green');
+        }
+      });
+    </script>
+  </body>
 </html>
