@@ -151,7 +151,7 @@
         const teapotSize = Number(document.getElementById("teapotSizeInput").value);
 
         // Calculate the required amount of water
-        const waterRequired = (people * teacupSize * fill * 0.01) - teapotSize;
+        const waterRequired = (people * teacupSize * fill * 0.01);
         const waterRequiredRounded = Math.round(waterRequired);
 
         // Display the result and apply the appropriate background color
