@@ -101,12 +101,12 @@ input[type="submit"]:hover {
 
 .collapsible-header::before {
   content: "+";
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .collapsible-header.active::before {
   content: "-";
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .collapsible-content {
