@@ -3,26 +3,82 @@
   <head>
     <title>Calculator for Required Brewing Water in Making Tea</title>
     <style>
+      /* Add CSS styles for the page layout */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        margin: 30px 20px;
+        font-size: 36px;
+        color: #222;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
       /* Add CSS styles for the form and input fields */
       form {
-        margin: 20px;
+        margin: 20px 0;
         padding: 20px;
         border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f5f5f5;
       }
 
       label {
         display: inline-block;
-        width: 200px;
+        width: 150px;
+        margin: 10px 0;
+        font-weight: bold;
       }
 
       input[type="text"] {
-        width: 200px;
-        margin-bottom: 10px;
+        width: 100px;
+        padding: 5px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #4285f4;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3c78d8;
       }
 
       /* Add CSS styles for the result cell */
-      #result {
+      .result {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 24px;
         font-weight: bold;
+        color: #fff;
+        text-align: center;
       }
 
       .gray {
@@ -30,37 +86,40 @@
       }
 
       .red {
-        background-color: #ff8080;
+        background-color: #f44336;
       }
 
       .yellow {
-        background-color: #ffff99;
+        background-color: #ffeb3b;
+        color: #222;
       }
 
       .green {
-        background-color: #b3ffb3;
+        background-color: #4caf50;
       }
     </style>
   </head>
   <body>
     <h1>Calculator for required brewing water</h1>
-    <form id="brewingForm">
-      <label for="peopleInput">People:</label>
-      <input type="text" id="peopleInput" name="peopleInput"><br>
+    <main>
+      <form id="brewingForm">
+        <label for="peopleInput">Number of People:</label>
+        <input type="text" id="peopleInput" name="peopleInput" required><br>
 
-      <label for="teacupSizeInput">Teacup Size (ml):</label>
-      <input type="text" id="teacupSizeInput" name="teacupSizeInput"><br>
+        <label for="teacupSizeInput">Teacup Size (ml):</label>
+        <input type="text" id="teacupSizeInput" name="teacupSizeInput" required><br>
 
-      <label for="fillInput">Teacup Fill (%):</label>
-      <input type="text" id="fillInput" name="fillInput"><br>
+        <label for="fillInput">Fill (%):</label>
+        <input type="text" id="fillInput" name="fillInput" required><br>
+ 
+        <label for="teapotSizeInput">Teapot Size (ml):</label>
+        <input type="text" id="teapotSizeInput" name="teapotSizeInput" required><br>
 
-      <label for="teapotSizeInput">Teapot Size (ml):</label>
-      <input type="text" id="teapotSizeInput" name="teapotSizeInput"><br>
+        <input type="submit" value="Calculate Water Required">
+      </form>
 
-      <input type="submit" value="Calculate">
-    </form>
-
-    <p>Water Required (ml): <span id="result"></span></p>
+  <div class="result" id="resultCell">0 ml</div>
+</main>
 
     <h2>Assumptions</h2>
     <ul>
@@ -78,32 +137,35 @@
       </ul>
 
     <script>
-      const form = document.querySelector('#brewingForm');
-      const resultEl = document.querySelector('#result');
+      // Add JavaScript code to calculate the required amount of water
+      const form = document.getElementById("brewingForm");
+      const resultCell = document.getElementById("resultCell");
 
-      form.addEventListener('submit', (event) => {
+      form.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        const people = parseInt(form.peopleInput.value);
-        const teacupSize = parseInt(form.teacupSizeInput.value);
-        const fill = parseInt(form.fillInput.value);
-        const teapotSize = parseInt(form.teapotSizeInput.value);
+        // Read the values entered by the user
+        const people = Number(document.getElementById("peopleInput").value);
+        const teacupSize = Number(document.getElementById("teacupSizeInput").value);
+        const fill = Number(document.getElementById("fillInput").value);
+        const teapotSize = Number(document.getElementById("teapotSizeInput").value);
 
-        const waterRequired = people * teacupSize * fill / 100;
-        const waterRatio = waterRequired / teapotSize;
+        // Calculate the required amount of water
+        const waterRequired = (people * teacupSize * fill * 0.01) - teapotSize;
+        const waterRequiredRounded = Math.round(waterRequired);
 
-        resultEl.textContent = waterRequired + 'ml';
-
-        resultEl.classList.remove('gray', 'red', 'yellow', 'green');
+        // Display the result and apply the appropriate background color
+        resultCell.innerText = waterRequiredRounded + " ml";
+        resultCell.classList.remove("gray", "red", "yellow", "green");
 
         if (teapotSize < waterRequired) {
-          resultEl.classList.add('gray');
-        } else if (waterRatio > 0.9) {
-          resultEl.classList.add('red');
-        } else if (waterRatio < 0.8) {
-          resultEl.classList.add('yellow');
+          resultCell.classList.add("gray");
+        } else if (waterRequired / teapotSize > 0.9) {
+          resultCell.classList.add("red");
+        } else if (waterRequired / teapotSize < 0.8) {
+          resultCell.classList.add("yellow");
         } else {
-          resultEl.classList.add('green');
+          resultCell.classList.add("green");
         }
       });
     </script>
