@@ -30,11 +30,19 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-function toggleContent(id) {
-  var content = document.getElementById(id);
-  if (content.style.display === "block") {
-    content.style.display = "none";
-  } else {
-    content.style.display = "block";
-  }
+// Get all the collapsible headings
+var collapsible = document.getElementsByClassName("collapsible");
+
+// Add click event listener to each heading
+for (var i = 0; i < collapsible.length; i++) {
+  collapsible[i].addEventListener("click", function() {
+    // Toggle the visibility of the content when the heading is clicked
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
 }

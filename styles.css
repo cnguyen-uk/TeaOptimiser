@@ -94,7 +94,24 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
-.assumptions-content,
-.result-explanation-content {
-  display: none;
+.collapsible {
+  cursor: pointer;
 }
+
+.collapsible::after {
+  content: "\002B";
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2212";
+}
+
+.content {
+  display: none;
+  margin-left: 20px;
+}
+
