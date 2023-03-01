@@ -101,18 +101,16 @@ input[type="submit"]:hover {
 
 .collapsible-header::before {
   content: "+";
-  margin-left: 10px;
 }
 
 .collapsible-header.active::before {
   content: "-";
-  margin-left: 10px;
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 3s ease-out;
   padding: 0 10px;
 }
 
