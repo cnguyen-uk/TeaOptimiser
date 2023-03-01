@@ -94,28 +94,24 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
-.collapsible {
-  position: relative;
-  padding-left: 20px; /* add some padding to the left of the heading */
+.toggle-heading {
   cursor: pointer;
+  padding: 10px;
 }
 
-.collapsible::before {
-  content: '+';
-  position: absolute;
-  left: 0;
-  top: 0;
+.toggle-heading::after {
+  content: "+";
+  margin-left: 5px;
 }
 
-.collapsible.active::before {
-  content: '-';
+.toggle-heading.is-open::after {
+  content: "-";
 }
 
-.content {
+.toggle-content {
+  padding-left: 30px;
+}
+
+.toggle-content.is-hidden {
   display: none;
-  padding-left: 20px; /* add some padding to the left of the content */
-}
-
-.active {
-  display: block;
 }
