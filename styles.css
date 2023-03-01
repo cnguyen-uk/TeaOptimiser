@@ -94,6 +94,10 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
+.collapsible-header {
+  padding: 0 10px;
+}
+
 .collapsible {
   cursor: pointer;
 }
