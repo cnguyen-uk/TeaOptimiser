@@ -28,27 +28,21 @@
       <div class="result" id="resultCell">0 ml</div>
     </main>
 
-    <button class="toggle-button" onclick="toggleContent('assumptions-content')">Toggle Assumptions</button>
-
-    <button class="toggle-button" onclick="toggleContent('result-explanation-content')">Toggle Result Explanation</button>
-
-    <div id="assumptions-content">
-      <h2>Assumptions</h2>
-      <ul>
+    <div class="content">
+      <h2 class="assumptions-heading">Assumptions</h2>
+      <ul class="assumptions-content">
         <li>The general recommended teapot fill is between 80% and 90% of maximum capacity.</li>
         <li>If a teapot is underfilled by too much, then it can be difficult to control the temperature of the brew since the hot water will cool down too fast due to the higher surface area to volume ratio (heat loss is proportional to the surface area, and stored heat energy is proportional to the volume).</li>
         <li>If a teapot is filled over 90% of capacity, then any in-built filters may get clogged with tea leaves, which will affect pouring.</li>
       </ul>
-    </div>
 
-    <div id="result-explanation-content">
-      <h2>Result Explanation</h2>
-        <ul>
-          <li>If the result goes green, then the teapot is the ideal size for the water required.</li>
-          <li>If the result goes yellow, then the teapot should be filled more than the required amount to reach at least 80% of the teapot size to improve heat retention, with a pitcher used to decant any leftover tea that doesn't fit in the teacup.</li>
-          <li>If the result goes red, then the teapot has been overfilled (exceeds 90% of capacity).</li>
-          <li>If the result goes grey, then the teapot size is logistically too small for the water required.</li>
-        </ul>
+      <h2 class="result-explanation-heading">Result Explanation</h2>
+      <ul class="result-explanation-content">
+        <li>If the result goes green, then the teapot is the ideal size for the water required.</li>
+        <li>If the result goes yellow, then the teapot should be filled more than the required amount to reach at least 80% of the teapot size to improve heat retention, with a pitcher used to decant any leftover tea that doesn't fit in the teacup.</li>
+        <li>If the result goes red, then the teapot has been overfilled (exceeds 90% of capacity).</li>
+        <li>If the result goes grey, then the teapot size is logistically too small for the water required.</li>
+      </ul>
     </div>
 
     <script src="script.js"></script>
