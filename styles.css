@@ -95,7 +95,7 @@ input[type="submit"]:hover {
 
 /* Add CSS styles for the explanatory sections */
 .collapsible-header {
-  padding-left: 20px; /* add 20 pixels of padding on the left side */
+  padding-left: 200px; /* add 20 pixels of padding on the left side */
 }
 
 .collapsible {
