@@ -30,19 +30,15 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-// Get all the collapsible headings
-var collapsible = document.getElementsByClassName("collapsible");
-
-// Add click event listener to each heading
-for (var i = 0; i < collapsible.length; i++) {
-  collapsible[i].addEventListener("click", function() {
-    // Toggle the visibility of the content when the heading is clicked
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
+// Add JavaScript code to allow for collapsible headings
+function toggleContent(event) {
+  const toggleId = event.currentTarget.getAttribute('data-toggle-id');
+  const toggleContent = document.getElementById(toggleId);
+  toggleContent.classList.toggle('is-hidden');
 }
+
+const toggleHeadings = document.querySelectorAll('.toggle-heading');
+toggleHeadings.forEach(heading => {
+  heading.addEventListener('click', toggleContent);
+});
+
