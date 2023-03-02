@@ -23,7 +23,6 @@ main {
 ul {
   word-wrap: break-word;
   max-width: 80ch;
-  margin-right: 10px
 }
 
 /* Add CSS styles for the form and input fields  */
@@ -127,7 +126,8 @@ input[type="submit"]:hover {
 
 .content {
   display: none;
-  padding-left: 20px; /* add some padding to the left of the content */
+  padding-left: 20px;
+  padding-right: 10px
 }
 
 .active {
