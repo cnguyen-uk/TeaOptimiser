@@ -26,6 +26,7 @@ form.addEventListener("submit", (event) => {
   // Display the result and apply the appropriate background color
   resultCell.innerText = waterRequiredRounded + " ml";
   resultCell.classList.remove("gray", "red", "yellow", "green");
+  idealFillRangeCell.classList.remove("gray", "red", "yellow", "green");
 
   if (teapotSize < waterRequired) {
     resultCell.classList.add("gray");
