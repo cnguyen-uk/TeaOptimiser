@@ -29,50 +29,6 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-// Add JavaScript code to validate user input
-
-function validateInput(inputElement, validationFunction) {
-  const inputValue = inputElement.value.trim();
-  const isValid = validationFunction(inputValue);
-
-  if (!isValid) {
-    inputElement.classList.add('invalid');
-    return false;
-  }
-
-  inputElement.classList.remove('invalid');
-  return true;
-}
-
-function validatePositiveInteger(inputValue) {
-  const intValue = parseInt(inputValue);
-  return !isNaN(intValue) && intValue > 0;
-}
-
-function validatePositiveFloat(inputValue) {
-  const floatValue = parseFloat(inputValue);
-  return !isNaN(floatValue) && floatValue > 0;
-}
-
-function validatePercentage(inputValue) {
-  const floatValue = parseFloat(inputValue);
-  return !isNaN(floatValue) && floatValue > 0 && floatValue <= 100;
-}
-
-const numPeopleInput = document.getElementById('peopleInput');
-const teacupSizeInput = document.getElementById('teacupSizeInput');
-const teacupFillInput = document.getElementById('teacupFillInput');
-const teapotSizeInput = document.getElementById('teapotSizeInput');
-
-function validateInputs() {
-  const numPeopleIsValid = validateInput(numPeopleInput, validatePositiveInteger);
-  const teacupSizeIsValid = validateInput(teacupSizeInput, validatePositiveFloat);
-  const teacupFillIsValid = validateInput(teacupFillInput, validatePercentage);
-  const teapotSizeIsValid = validateInput(teapotSizeInput, validatePositiveFloat);
-
-  return numPeopleIsValid && teacupSizeIsValid && teacupFillIsValid && teapotSizeIsValid;
-}
-
 // Get all the collapsible headings
 var collapsible = document.getElementsByClassName("collapsible");
 
