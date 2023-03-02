@@ -110,17 +110,9 @@ input[type="submit"]:hover {
 
 /* Add CSS styles for the explanatory sections */
 .collapsible {
-  display: block;
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
   cursor: pointer;
-  width: auto;
-}
-
-.collapsible-content {
-  display: none;
-  overflow: hidden;
-  width: auto;
 }
 
 .collapsible::after {
