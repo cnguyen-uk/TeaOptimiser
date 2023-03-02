@@ -99,16 +99,6 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
-.collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 100s ease-out;
-}
-
-.collapsible-content.is-expanded {
-  max-height: 1000px;
-}
-
 .collapsible {
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
