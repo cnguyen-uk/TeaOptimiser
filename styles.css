@@ -26,7 +26,7 @@ ul {
 }
 
 /* Add CSS styles for the form, input fields, and ideal teapot fill range result */
-form, .idealFillRangeCell {
+form, #idealFillRangeCell {
   margin: 20px 0;
   padding: 20px;
   border: 1px solid #ccc;
@@ -71,7 +71,7 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the result cell */
-.resultCell {
+result {
   margin: 20px 0;
   padding: 20px;
   border-radius: 5px;
