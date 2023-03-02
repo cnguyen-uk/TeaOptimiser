@@ -34,7 +34,7 @@ form, #idealFillRangeCell {
   background-color: #f5f5f5;
 }
 
-label {
+label, #idealFillRangeCell {
   display: inline-block;
   width: 150px;
   margin: 10px 0;
