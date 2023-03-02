@@ -21,7 +21,7 @@ form.addEventListener("submit", (event) => {
   const maxIdealFill = teapotSize * 0.9
   const minIdealFillRounded = Math.round(minIdealFill)
   const maxIdealFillRounded = Math.round(maxIdealFill)
-  idealFillRangeCell.innertext = "Ideal Teapot Fill Range: " + minIdealFillRounded + "-" + maxIdealFillRounded + " ml";
+  idealFillRangeCell.innerText = "Ideal Teapot Fill Range: " + minIdealFillRounded + "-" + maxIdealFillRounded + " ml";
 
   // Display the result and apply the appropriate background color
   resultCell.innerText = waterRequiredRounded + " ml";
