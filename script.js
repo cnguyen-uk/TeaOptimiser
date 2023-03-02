@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
     resultCell.classList.add("red");
   } else if (waterRequired / teapotSize < 0.8) {
     resultCell.classList.add("yellow");
-    message += '<br>Fill teapot between ' + Math.round(teapotSize * 0.8) + 'ml and ' + Math.round(teapotSize * 0.9) + 'ml';
+    message = 'waterRequiredRounded + " ml"<br>Fill teapot between ' + Math.round(teapotSize * 0.8) + 'ml and ' + Math.round(teapotSize * 0.9) + 'ml';
   } else {
     resultCell.classList.add("green");
   }
