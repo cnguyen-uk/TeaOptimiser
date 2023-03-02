@@ -110,7 +110,7 @@ input[type="submit"]:hover {
 
 /* Add CSS styles for the explanatory sections */
 .collapsible {
-  display: inline-block;
+  display: block;
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
   cursor: pointer;
