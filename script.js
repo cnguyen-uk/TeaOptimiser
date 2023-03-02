@@ -3,7 +3,6 @@ const form = document.getElementById("brewingForm");
 const resultCell = document.getElementById("resultCell");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
 
   // Read the values entered by the user
   const people = Number(document.getElementById("peopleInput").value);
