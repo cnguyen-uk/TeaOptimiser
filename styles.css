@@ -99,7 +99,8 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the explanatory sections */
-.collapsible-content {
+.collapsible,
+.content {
   background-color: #f7f7f7;
 }
 
@@ -121,6 +122,7 @@ input[type="submit"]:hover {
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
   cursor: pointer;
+  background-color: #f7f7f7;
 }
 
 .collapsible::after {
