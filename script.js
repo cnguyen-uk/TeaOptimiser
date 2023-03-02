@@ -26,20 +26,15 @@ form.addEventListener("submit", (event) => {
   // Display the result and apply the appropriate background color
   resultCell.innerText = waterRequiredRounded + " ml";
   resultCell.classList.remove("gray", "red", "yellow", "green");
-  idealFillRangeCell.classList.remove("gray", "red", "yellow", "green");
 
   if (teapotSize < waterRequired) {
     resultCell.classList.add("gray");
-    idealFillRangeCell.classList.add("gray");
   } else if (waterRequired / teapotSize > 0.9) {
     resultCell.classList.add("red");
-    idealFillRangeCell.classList.add("red");
   } else if (waterRequired / teapotSize < 0.8) {
     resultCell.classList.add("yellow");
-    idealFillRangeCell.classList.add("yellow");
   } else {
     resultCell.classList.add("green");
-    idealFillRangeCell.classList.add("green");
   }
 });
 
