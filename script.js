@@ -16,8 +16,8 @@ form.addEventListener("submit", (event) => {
   const waterRequiredRounded = Math.round(waterRequired);
 
   // Display the result and apply the appropriate background color
-  resultCell.innerText = waterRequiredRounded + " ml";
   resultCell.classList.remove("gray", "red", "yellow", "green");
+  let additionalMsg = '';
 
   if (teapotSize < waterRequired) {
     resultCell.classList.add("gray");
@@ -25,9 +25,12 @@ form.addEventListener("submit", (event) => {
     resultCell.classList.add("red");
   } else if (waterRequired / teapotSize < 0.8) {
     resultCell.classList.add("yellow");
+    additionalMsg = '<br>Fill teapot between ' + Math.round(teapotSize * 0.8) + 'ml and ' + Math.round(teapotSize * 0.9) + 'ml';
   } else {
     resultCell.classList.add("green");
   }
+
+  resultCell.innerText = waterRequiredRounded + " ml" + additionalMsg;
 });
 
 // Get all the collapsible headings
