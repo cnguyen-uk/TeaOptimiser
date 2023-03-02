@@ -71,7 +71,7 @@ input[type="submit"]:hover {
 }
 
 /* Add CSS styles for the result cell */
-result {
+.result {
   margin: 20px 0;
   padding: 20px;
   border-radius: 5px;
