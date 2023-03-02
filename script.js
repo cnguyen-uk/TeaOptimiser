@@ -1,6 +1,7 @@
 // Add JavaScript code to calculate the required amount of water
 const form = document.getElementById("brewingForm");
 const resultCell = document.getElementById("resultCell");
+const idealFillRangeCell = document.getElementById("idealFillRangeCell");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -14,6 +15,13 @@ form.addEventListener("submit", (event) => {
   // Calculate the required amount of water
   const waterRequired = (people * teacupSize * teacupFill * 0.01);
   const waterRequiredRounded = Math.round(waterRequired);
+
+  // Calculate the ideal fill range of the teapot
+  const minIdealFill = teapotSize * 0.8
+  const maxIdealFill = teapotSize * 0.9
+  const minIdealFillRounded = Math.round(minIdealFill)
+  const maxIdealFillRounded = Math.round(maxIdealFill)
+  idealFillRangeCell.innertext = "Ideal Teapot Fill Range: " + minIdealFillRounded + "-" + maxIdealFillRounded + " ml";
 
   // Display the result and apply the appropriate background color
   resultCell.innerText = waterRequiredRounded + " ml";
