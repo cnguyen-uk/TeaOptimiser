@@ -22,7 +22,7 @@ main {
 
 ul {
   word-wrap: break-word;
-  width: 80ch;
+  max-width: 80ch;
 }
 
 /* Add CSS styles for the form and input fields  */
