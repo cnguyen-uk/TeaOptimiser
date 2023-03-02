@@ -8,11 +8,11 @@ form.addEventListener("submit", (event) => {
   // Read the values entered by the user
   const people = Number(document.getElementById("peopleInput").value);
   const teacupSize = Number(document.getElementById("teacupSizeInput").value);
-  const fill = Number(document.getElementById("fillInput").value);
+  const teacupFill = Number(document.getElementById("teacupFillInput").value);
   const teapotSize = Number(document.getElementById("teapotSizeInput").value);
 
   // Calculate the required amount of water
-  const waterRequired = (people * teacupSize * fill * 0.01);
+  const waterRequired = (people * teacupSize * teacupFill * 0.01);
   const waterRequiredRounded = Math.round(waterRequired);
 
   // Display the result and apply the appropriate background color
