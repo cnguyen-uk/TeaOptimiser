@@ -114,7 +114,7 @@ input[type="submit"]:hover {
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
   cursor: pointer;
-  width: 50%;
+  width: 10%;
 }
 
 .collapsible-content {
