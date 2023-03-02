@@ -14,9 +14,9 @@ form.addEventListener("submit", (event) => {
   // Calculate the required amount of water
   const waterRequired = (people * teacupSize * teacupFill * 0.01);
   const waterRequiredRounded = Math.round(waterRequired);
-  let message = waterRequiredRounded + " ml"
 
   // Display the result and apply the appropriate background color
+  resultCell.innerText = waterRequiredRounded + " ml";
   resultCell.classList.remove("gray", "red", "yellow", "green");
 
   if (teapotSize < waterRequired) {
@@ -25,12 +25,9 @@ form.addEventListener("submit", (event) => {
     resultCell.classList.add("red");
   } else if (waterRequired / teapotSize < 0.8) {
     resultCell.classList.add("yellow");
-    message = 'waterRequiredRounded + " ml"<br>Fill teapot between ' + Math.round(teapotSize * 0.8) + 'ml and ' + Math.round(teapotSize * 0.9) + 'ml';
   } else {
     resultCell.classList.add("green");
   }
-
-  resultCell.insertAdjacentHTML("beforeend", message);
 });
 
 // Get all the collapsible headings
