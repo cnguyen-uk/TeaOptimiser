@@ -25,8 +25,8 @@ ul {
   width: 80ch;
 }
 
-/* Add CSS styles for the form, input fields, and ideal teapot fill range result */
-form, #idealFillRangeCell {
+/* Add CSS styles for the form and input fields  */
+form {
   margin: 20px 0;
   padding: 20px;
   border: 1px solid #ccc;
@@ -34,7 +34,7 @@ form, #idealFillRangeCell {
   background-color: #f5f5f5;
 }
 
-label, #idealFillRangeCell {
+label {
   display: inline-block;
   width: 150px;
   margin: 10px 0;
@@ -68,6 +68,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #3c78d8;
+}
+
+/* Add CSS styles for the ideal teapot fill range result cell */
+#idealFillRangeCell {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  font-weight: bold;
 }
 
 /* Add CSS styles for the result cell */
