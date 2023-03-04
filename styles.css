@@ -98,7 +98,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.gray {
+.grey {
   background-color: #ccc;
 }
 
@@ -140,7 +140,7 @@ aside {
   padding-right: 10px
 }
 
-#gray-explanation {
+#grey-explanation {
   background-color: #ccc;
   color: #fff;
 }
