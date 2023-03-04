@@ -131,7 +131,7 @@ input::-webkit-inner-spin-button {
   content: '-';
 }
 
-.content {
+#aside {
   display: none;
   padding-left: 20px;
   padding-right: 10px
