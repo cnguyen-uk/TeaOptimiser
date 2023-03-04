@@ -130,32 +130,32 @@ input::-webkit-inner-spin-button {
   content: '-';
 }
 
-#aside {
+.active {
+  display: block;
+}
+
+aside {
   display: none;
   padding-left: 20px;
   padding-right: 10px
 }
 
-.active {
-  display: block;
-}
-
-.gray-explanation {
+#gray-explanation {
   background-color: #ccc;
   color: #fff;
 }
 
-.red-explanation {
+#red-explanation {
   background-color: #f44336;
   color: #fff;
 }
 
-.yellow-explanation {
+#yellow-explanation {
   background-color: #ffeb3b;
   color: #fff;
 }
 
-.green-explanation {
+#green-explanation {
   background-color: #4caf50;
   color: #fff;
 }
