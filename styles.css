@@ -139,3 +139,23 @@ input::-webkit-inner-spin-button {
 .active {
   display: block;
 }
+
+.gray-explanation {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.red-explanation {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.yellow-explanation {
+  background-color: #ffeb3b;
+  color: #fff;
+}
+
+.green-explanation {
+  background-color: #4caf50;
+  color: #fff;
+}
