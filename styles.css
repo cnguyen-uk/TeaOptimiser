@@ -94,7 +94,6 @@ input::-webkit-inner-spin-button {
   padding: 20px;
   border-radius: 5px;
   font-size: 24px;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -128,22 +127,26 @@ aside {
 #grey-explanation {
   background-color: #a5a5a5;
   color: #fff;
+  font-weight: bold;
 }
 
 .red,
 #red-explanation {
   background-color: #ffc7ce;
   color: #9c0006;
+  font-weight: bold;
 }
 
 .yellow,
 #yellow-explanation {
   background-color: #ffeb9c;
   color: #9c6500;
+  font-weight: bold;
 }
 
 .green,
 #green-explanation {
   background-color: #c6efce;
   color: #006100;
+  font-weight: bold;
 }
