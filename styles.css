@@ -100,19 +100,19 @@ input::-webkit-inner-spin-button {
 }
 
 .grey {
-  background-color: #ccc;
+  background-color: #a5a5a5;
 }
 
 .red {
-  background-color: #f44336;
+  background-color: #ffc7ce;
 }
 
 .yellow {
-  background-color: #ffeb3b;
+  background-color: #ffeb9c;
 }
 
 .green {
-  background-color: #4caf50;
+  background-color: #c6efce;
 }
 
 /* Add CSS styles for the explanatory sections */
@@ -142,21 +142,21 @@ aside {
 }
 
 #grey-explanation {
-  background-color: #ccc;
+  background-color: #a5a5a5;
   color: #fff;
 }
 
 #red-explanation {
-  background-color: #f44336;
-  color: #fff;
+  background-color: #ffc7ce;
+  color: #9c0006;
 }
 
 #yellow-explanation {
-  background-color: #ffeb3b;
-  color: #fff;
+  background-color: #ffeb9c;
+  color: #9c6500;
 }
 
 #green-explanation {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: #c6efce;
+  color: #006100;
 }
