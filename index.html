@@ -13,16 +13,16 @@
     <main>
       <form id="brewingForm">
         <label for="peopleInput">Number of People:</label>
-        <input type="text" id="peopleInput" name="peopleInput" required><br>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" id="peopleInput" name="peopleInput" required><br>
 
         <label for="teacupSizeInput">Teacup Size (ml):</label>
-        <input type="text" id="teacupSizeInput" name="teacupSizeInput" required><br>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" id="teacupSizeInput" name="teacupSizeInput" required><br>
 
         <label for="teacupFillInput">Teacup Fill (%):</label>
-        <input type="text" id="teacupFillInput" name="teacupFillInput" required><br>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" id="teacupFillInput" name="teacupFillInput" required><br>
  
         <label for="teapotSizeInput">Teapot Size (ml):</label>
-        <input type="text" id="teapotSizeInput" name="teapotSizeInput" required><br>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" id="teapotSizeInput" name="teapotSizeInput" required><br>
 
         <input type="submit" value="Calculate Water Required">
       </form>
