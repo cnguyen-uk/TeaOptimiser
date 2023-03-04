@@ -9,6 +9,11 @@ h1 {
   margin: 30px 20px;
   font-size: 36px;
   color: #222;
+  text-align: center;
+}
+
+section {
+  text-align: center;
 }
 
 main {
