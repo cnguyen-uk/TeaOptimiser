@@ -98,6 +98,11 @@ input::-webkit-inner-spin-button {
 }
 
 /* Add CSS styles for the explanatory sections */
+section {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
 .collapsible {
   position: relative;
   padding-left: 20px; /* add some padding to the left of the heading */
